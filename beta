@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Settlers Online - Combat Simulator</title>
+    <link rel="stylesheet" href="rsc/main.css">
+    <link rel="stylesheet" href="rsc/colors.css">
+    <script type="text/javascript" src="rsc/script/i18n.js"> </script>
+    <script type="text/javascript" src="rsc/script/definitions.js"> </script>
+    <script type="text/javascript" src="rsc/script/exp.js"> </script>
+    <script type="text/javascript" src="rsc/script/units.js"> </script>
+    <script type="text/javascript" src="rsc/script/combatlog.js"> </script>
+    <script type="text/javascript" src="rsc/script/sim.js"> </script>
+    <script type="text/javascript" src="rsc/script/diagram.js"> </script>
+    <script type="text/javascript" src="rsc/script/ui.js"> </script>
+</head>
+
+<body>
+    <header>
+        <h1 id="simTitle"></h1>
+        <div id="simHead">
+            <div id="simVersions"></div>
+            <div id="simLang"></div>
+        </div>
+    </header>
+    
+    <div id="center">
+        <div id="centerInput">
+            <div id="player">
+                <h3 id="puStr">Player -- Units</h3>
+                <div>
+                    <div id="generals">
+                        <span id="pgen1" class="genTab inputTabActive">General 1</span>
+                        <span id="pgen2" class="genTab inputTab">General 2</span>
+                        <span id="pgen3" class="genTab inputTab">General 3</span>
+                        <span id="pgen4" class="genTab inputTab">General 4</span>
+                        <span id="pgen5" class="genTab inputTab">General 5</span>
+                        <span id="pgen6" class="genTab inputTab">General 6</span>
+                    </div>
+                    <div class="units_area" id="units_player"></div>
+                </div>
+            </div>
+            <div id="computer">
+                <h3 id="cuStr">Computer Units</h3>
+                <div>
+                    <div id="advmaps">
+                        <span id="tabPlayerIsland" class="compTab inputTabActive">Player Island</span>
+                        <span id="tabAdvSelect" class="compTab inputTab">
+                            <span id="advStr"></span>
+                            <span><select id="selAdv"></select></span>
+                        </span>
+                    </div>
+                    <div class="units_area" id="units_computer"></div>
+                </div>
+            </div>
+        </div>	
+        <div id="centerControl">
+            <div id="buttonsSim">
+                <span>
+                    <button id="startSim" type="button">Start Simulation</button>
+                </span>
+                <span>
+                    <label id="iterStr">Iterations</label> 
+                    <input id="inpNumIter" type="number" min="0" step="1" value="500"/>
+                </span>
+                <span>
+                    <button id="resetInput" type="button">Reset</button>
+                </span>
+            </div>
+            <div id="buttonsResOptions">
+                <span class="inputTabActive" id="buttonStatistics">Statistics</span>
+                <span class="inputTab" id="buttonCombatLog">Combat Log</span>
+            </div>
+        </div>
+        <div id="centerResults">
+            <h2 id="resStr">Results</h2>
+            <div id="simLink"></div>
+            <div id="waveResults"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <div id="fleft">
+            <p id="contact">
+            &copy; 2014, NuzoweR@Schneefeuer <br>
+            Email: nuzower@gmail.com <br>
+            Forum: <a href="http://forum.diesiedleronline.de/threads/112557-Simulator-Kampfsimulator">diesiedleronline.de</a>,
+                <a href="http://forum.tsotesting.com/threads/20920-New-Simulator-for-Adventures-and-Expeditions">tsotesting.com</a>
+            </p>
+        </div>
+        <div id="fright">
+            <p>Background images from <a href="http://subtlepatterns.com">subtlepatterns.com</a> are<br> 
+            licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CC BY-SA 3.0 licence</a><br>
+            Unit graphics copyright by Blue Byte GmbH</p>
+        </div>
+    </footer>
+</body>
+</html>
